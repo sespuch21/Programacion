@@ -1,3 +1,5 @@
+package com.company;
+
 public class Estudiant extends Persona {
     //clase extendida de Persona
 
@@ -7,8 +9,14 @@ public class Estudiant extends Persona {
 
 
     }
-    public void posarNota (double nota){
+    public void posarNota (double nota) throws Exception{
         this.nota = nota;
+        if(nota >10) {
+            throw new Exception("Nota invalida");
+
+        } else if (nota <0 ) {
+            throw new Exception("Nota invalida");
+        }
 
     }
     public String obtenirDades(){
