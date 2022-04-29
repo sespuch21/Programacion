@@ -1,27 +1,54 @@
 package com.company;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Estudiant extends Persona {
     //clase extendida de Persona
 
-    private double nota;
+    private List<Double> notas =new ArrayList<Double>();
+
+    public double obtenerNotaMaxima(List<Double> notas) {
+        double max = 0;
+
+
+        for(double str : this.notas) {
+            if (str > max) {
+                max = str;
+            }
+        }
+        return max;
+    }
+    public double obtenerNotaMinima(List<Double> notas) {
+        double min = 0;
+        for(double str : this.notas) {
+            if (str < min) {
+                min = str;
+            }
+        }
+        return min;
+    }
+
+
 
     public Estudiant(){
 
-
     }
     public void posarNota (double nota) throws Exception{
-        this.nota = nota;
+
         if(nota >10) {
             throw new Exception("Nota invalida");
 
         } else if (nota <0 ) {
             throw new Exception("Nota invalida");
+        } else {
+            this.notas.add(nota);
         }
 
     }
-    public String obtenirDades(){
+
+    public String obtenirDades() throws Exception {
         //datos de persona mas nota
-        return super.obtenirDades() + " que te nota " + this.nota;
+        return super.obtenirDades() + " que te nota maxima de " + obtenerNotaMaxima(this.notas) + "Nota minima de  " + obtenerNotaMinima(this.notas);
 
     }
 

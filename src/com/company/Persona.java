@@ -26,7 +26,10 @@ public class Persona {
 
     }
     // Funcion retornar el nom i dni
-    public String obtenirDades (){
-        return "Persona que es diu " + this.nom + " Amb dni:" + this.dni;
+    public String obtenirDades() throws Exception{
+        if(dni == null || nom == null ) {
+            throw new Exception("Error al obtener los datos");
+        }
+        return "Persona que es diu " + nom + " Amb dni:" + dni;
     }
 }
