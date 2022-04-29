@@ -19,7 +19,7 @@ public class Estudiant extends Persona {
         }
 
     }
-    public String obtenirDades(){
+    public String obtenirDades() throws Exception {
         //datos de persona mas nota
         return super.obtenirDades() + " que te nota " + this.nota;
 

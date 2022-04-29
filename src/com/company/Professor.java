@@ -3,7 +3,7 @@ package com.company;
 public class Professor extends Persona {
     private double sou;
 
-    public void canviarSou( double sou) throws Exception{
+    public void canviarSou( double sou) throws Exception {
 
         if (sou >= 3000) {
             throw new Exception("Error");
@@ -16,8 +16,9 @@ public class Professor extends Persona {
 
     }
 
-    public String obtenirDades(){
-        return super.obtenirDades() + " amb nou sou " + this.sou;
+    public String obtenirDades() throws Exception {
+
+        return super.obtenirDades() + " amb nou sou " + sou;
     }
 
 }

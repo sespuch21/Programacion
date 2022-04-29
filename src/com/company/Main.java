@@ -6,13 +6,12 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-
+        Institut ins = new Institut("La Guineueta");
         Persona p1 = new Persona(); //instancia
         Persona p2 = new Persona();
 
-        p1.canviarNom("Marc");
+        p1.canviarNom("75247845G");
         p1.canviarDni("46419312F");
-        p1.canviarDni("46519312F");
         String dades = p1.obtenirDades();
         System.out.println(dades);
 
@@ -44,5 +43,8 @@ public class Main {
         ps.obtenirDades();
         dades = ps.obtenirDades();
         System.out.println(dades);
+
+
+
     }
 }

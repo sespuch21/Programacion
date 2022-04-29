@@ -8,7 +8,9 @@ public class Institut {
     private String profe;
     private String estudiant;
 
-    public Institut(){
+    public Institut(String nom){
+        this.nom = nom;
+        System.out.println(nom);
     }
 
     public void afegirProfe(String profe) {

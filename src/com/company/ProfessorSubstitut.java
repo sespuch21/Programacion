@@ -17,7 +17,7 @@ public class ProfessorSubstitut extends Professor {
     }
 
 
-    public String obtenirDades(){
+    public String obtenirDades() throws Exception {
         return super.obtenirDades() + " Data Inici:" + dataInici + " Data final:" + dataFi;
     }
 
