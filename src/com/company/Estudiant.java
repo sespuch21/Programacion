@@ -1,5 +1,6 @@
 package com.company;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Estudiant extends Persona {
@@ -19,13 +20,25 @@ public class Estudiant extends Persona {
         return max;
     }
     public double obtenerNotaMinima(List<Double> notas) {
-        double min = 0;
+        double min = 10;
         for(double str : this.notas) {
             if (str < min) {
                 min = str;
             }
         }
         return min;
+    }
+    public double obtenerNotaMitjana(List<Double> notas) {
+        double suma = 0;
+        double medi;
+        int size = notas.size();
+        for(double str : this.notas) {
+            suma += str;
+            }
+        medi = suma / size;
+
+        return medi;
+
     }
 
 
@@ -48,7 +61,7 @@ public class Estudiant extends Persona {
 
     public String obtenirDades() throws Exception {
         //datos de persona mas nota
-        return super.obtenirDades() + " que te nota maxima de " + obtenerNotaMaxima(this.notas) + "Nota minima de  " + obtenerNotaMinima(this.notas);
+        return super.obtenirDades() + " que te nota maxima de " + obtenerNotaMaxima(this.notas) + " Nota minima de  " + obtenerNotaMinima(this.notas) +" Nota Mitja " + String.format("%.3f", obtenerNotaMitjana(this.notas)) ;
 
     }
 

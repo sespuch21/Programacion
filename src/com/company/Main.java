@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         Institut ins = new Institut("La Guineueta");
+
         Persona p1 = new Persona(); //instancia
         Persona p2 = new Persona();
 
