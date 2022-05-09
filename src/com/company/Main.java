@@ -17,7 +17,7 @@ public class Main {
         System.out.println(dades);
 
         Estudiant e = new Estudiant();
-        e.posarNota(2);
+        e.posarNota(1);
         e.posarNota(9);
         e.posarNota(4);
         e.posarNota(6);

@@ -20,7 +20,7 @@ public class Estudiant extends Persona {
         return max;
     }
     public double obtenerNotaMinima(List<Double> notas) {
-        double min = 10;
+        double min = this.notas.get(0);
         for(double str : this.notas) {
             if (str < min) {
                 min = str;
@@ -46,19 +46,23 @@ public class Estudiant extends Persona {
     public Estudiant(){
 
     }
-    public void posarNota (double nota) throws Exception{
+    public void posarNota (double nota) throws Exception {
 
-        if(nota >10) {
+        if (nota > 10) {
             throw new Exception("Nota invalida");
-
-        } else if (nota <0 ) {
+        } else if (nota < 0) {
             throw new Exception("Nota invalida");
         } else {
-            this.notas.add(nota);
+            if (this.notas.size() == 0) {
+                this.notas.add(nota);
+            } else {
+                this.notas.add(nota);
+
+
+            }
+
         }
-
     }
-
     public String obtenirDades() throws Exception {
         //datos de persona mas nota
         return super.obtenirDades() + " que te nota maxima de " + obtenerNotaMaxima(this.notas) + " Nota minima de  " + obtenerNotaMinima(this.notas) +" Nota Mitja " + String.format("%.3f", obtenerNotaMitjana(this.notas)) ;
