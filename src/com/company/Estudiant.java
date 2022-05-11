@@ -53,13 +53,7 @@ public class Estudiant extends Persona {
         } else if (nota < 0) {
             throw new Exception("Nota invalida");
         } else {
-            if (this.notas.size() == 0) {
                 this.notas.add(nota);
-            } else {
-                this.notas.add(nota);
-
-
-            }
 
         }
     }
